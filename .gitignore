@@ -1,0 +1,38 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Environments & Virtual Envs
+.venv/
+venv/
+ENV/
+env/
+.env
+
+# Node.js & Frontend dependencies
+node_modules/
+dist/
+build/
+.cache/
+*.log
+
+# Database & OS generated files
+.DS_Store
+*.sqlite3
+pgdata/
+
+# ML Data & Trained Artifacts (Large Files)
+ml_pipeline/data/*.tif
+ml_pipeline/data/*.nc
+ml_pipeline/data/*.csv
+*.onnx
+*.pkl
+!.gitkeep
+
+# IDE & Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
