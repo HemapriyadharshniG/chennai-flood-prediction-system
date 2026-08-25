@@ -1,43 +1,5 @@
-# Byte-compiled / optimized / DLL files
-__pycache__/
-*.py[cod]
-*$py.class
-*.so
-
-# Environments & Virtual Envs
-.venv/
-venv/
-ENV/
-env/
-.env
-
-# Node.js & Frontend dependencies
-node_modules/
-dist/
-build/
-.cache/
-*.log
-
-# Database & OS generated files
+# Root Git Ignore
+node_modules
 .DS_Store
-*.sqlite3
-pgdata/
-
-# ML Data & Trained Artifacts (Large Files)
-ml_pipeline/data/*.tif
-ml_pipeline/data/*.nc
-ml_pipeline/data/*.csv
-ml_pipeline/models/*.json
-*.onnx
-*.pkl
-# Trained model artifact the backend actually loads at runtime -- small
-# (well under the Git LFS threshold), and needed for the API to serve
-# real predictions instead of a 503.
-!backend/app/ml/*.pkl
-!.gitkeep
-
-# IDE & Editor files
-.vscode/
-.idea/
-*.swp
-*.swo
+dist
+*.log
