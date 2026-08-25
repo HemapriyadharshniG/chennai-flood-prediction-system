@@ -8,6 +8,8 @@ for API routers and background schedulers.
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
+from app.api.router import router as api_router
+
 app = FastAPI(
     title="Chennai Flood Prediction API",
     description="Backend API for real-time and predictive flood risk monitoring in Chennai.",
@@ -40,13 +42,11 @@ async def health_check():
     return {"status": "ok"}
 
 
-# ---------------------------------------------------------------------------
-# Router & Scheduler Integration (Scaffold Placeholders)
-# ---------------------------------------------------------------------------
-# TODO: Import and include API routers once implemented:
-# from app.api.router import router as api_router
-# app.include_router(api_router, prefix="/api")
+app.include_router(api_router, prefix="/api")
 
+# ---------------------------------------------------------------------------
+# Scheduler Integration (Scaffold Placeholder)
+# ---------------------------------------------------------------------------
 # TODO: Start APScheduler on startup event / lifespan:
 # @app.on_event("startup")
 # async def start_scheduler():
