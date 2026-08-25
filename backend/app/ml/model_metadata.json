@@ -1,0 +1,30 @@
+{
+  "feature_columns": [
+    "rainfall_1h_cm",
+    "rainfall_3h_cm",
+    "rainfall_24h_cm",
+    "rainfall_7d_cm",
+    "humidity_pct",
+    "temperature_c",
+    "month",
+    "is_monsoon",
+    "avg_elevation_m",
+    "drainage_capacity_score",
+    "impervious_surface_pct",
+    "proximity_to_water_km"
+  ],
+  "model_type": "LGBMClassifier",
+  "risk_thresholds": {
+    "LOW": 0.25,
+    "MODERATE": 0.55,
+    "HIGH": 0.8,
+    "CRITICAL": 1.0
+  },
+  "training_samples": 1281600,
+  "test_samples": 164880,
+  "roc_auc": 0.9929346652969496,
+  "precision": 0.15572625698324022,
+  "recall": 0.7743055555555556,
+  "train_test_split_date": "2023-10-01",
+  "caveat": "Trained on only 3 known flood events across 2014-2024, labelled as zone-level event windows rather than per-timestamp ground truth. This is a demonstrator model, not a validated predictor."
+}
