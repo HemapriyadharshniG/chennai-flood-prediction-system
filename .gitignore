@@ -27,6 +27,7 @@ pgdata/
 ml_pipeline/data/*.tif
 ml_pipeline/data/*.nc
 ml_pipeline/data/*.csv
+ml_pipeline/models/*.json
 *.onnx
 *.pkl
 !.gitkeep
