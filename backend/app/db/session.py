@@ -23,8 +23,9 @@ SessionLocal = sessionmaker(
 # e.g., with engine.connect() as conn: conn.execute(text("CREATE EXTENSION IF NOT EXISTS postgis;"))
 
 
+
 def get_db() -> Generator[Session, None, None]:
-    """FastAPI dependency yielding a database session per request."""
+    """FastAPI dependency yielding a request-scoped session."""
     db = SessionLocal()
     try:
         yield db
